@@ -1,0 +1,19 @@
+{
+  "name": "BF2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "set PORT=3001 && react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "sass": "sass src --style compressed --quiet",
+    "dev": "npm run sass & npm run start"
+  },
+  "private": true,
+  "dependencies": {
+    "axios": "^1.13.5"
+  }
+}
