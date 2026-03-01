@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 const apiClient = axios.create({
     baseURL: "http://localhost:3000/api",
@@ -9,24 +9,24 @@ const apiClient = axios.create({
 });
 
 export const api = {
-    createUser: async (user) => {
-        const response = await apiClient.post("/users", user);
+    createProduct: async (product) => {
+        const response = await apiClient.post("/products", product);
         return response.data;
     },
-    getUsers: async () => {
-        const response = await apiClient.get("/users");
+    getProducts: async () => {
+        const response = await apiClient.get("/products");
         return response.data;
     },
-    getUserById: async (id) => {
-        const response = await apiClient.get(`/users/${id}`);
+    getProductById: async (id) => {
+        const response = await apiClient.get(`/products/${id}`);
         return response.data;
     },
-    updateUser: async (id, user) => {
-        const response = await apiClient.patch(`/users/${id}`, user);
+    updateProduct: async (id, product) => {
+        const response = await apiClient.patch(`/products/${id}`, product);
         return response.data;
     },
-    deleteUser: async (id) => {
-        await apiClient.delete(`/users/${id}`);
-        return { success: true };
+    deleteProduct: async (id) => {
+        const response = await apiClient.delete(`/products/${id}`);
+        return response.data;
     }
 };
